@@ -18,7 +18,8 @@ import { HeroesListComponent } from './simple-router/heroes-list/heroes-list.com
     BrowserModule,
     RouterModule.forRoot([
       {path: 'crisis-list', component: CrisisListComponent},
-      {path: 'heroes-list', component: HeroesListComponent}
+      {path: 'heroes-list', component: HeroesListComponent},
+      {path: '**', component: PageNotFoundComponent}
     ]),
   ],
   providers: [],
