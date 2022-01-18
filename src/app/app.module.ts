@@ -8,6 +8,7 @@ import { CrisisListComponent } from './simple-router/crisis-list/crisis-list.com
 import { HeroesListComponent } from './simple-router/heroes-list/heroes-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {path: 'crisis-list', component: CrisisListComponent},
-      {path: 'heroes-list', component: HeroesListComponent},
-      {path: '', redirectTo: '/heroes', pathMatch: 'full'},
-      {path: '**', component: PageNotFoundComponent}
-    ]),
+    FormsModule,
     AppRoutingModule,
   ],
   providers: [],
